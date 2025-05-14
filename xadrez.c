@@ -32,15 +32,17 @@ int main() {
     printf("\n"); // Pula uma linha inteira
 
 
-    int bispohorizontal = 5;
     int bispovertical = 5;
+    int bispohorizontal = 5;
 
     printf("Movimento do Bispo ♝ :\n\n");
 
-    while (bispovertical <= 5 && bispovertical > 0) // Loop while que executa enquanto a variável torre for menor ou igual a 5 e maior que 0
+    while (bispovertical > 0 && bispovertical <= 5) // Loop while que executa enquanto a variável bispo vertical for menor que 0 e maior ou igual a 5
     {
         printf ("♝ Cima, ");
         looprecursivo2(bispohorizontal); // Chama a função recursiva, aninhando-a com o loop while
+        bispovertical--;
+        bispohorizontal--;
     }
     printf("\n");
 
